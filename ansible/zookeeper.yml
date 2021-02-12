@@ -1,0 +1,6 @@
+- hosts: zookeeper
+  become: yes
+  roles:
+    - role: lean_delivery.java
+    - role: lean_delivery.zookeeper
+      zk_inventory_group: zookeeper
