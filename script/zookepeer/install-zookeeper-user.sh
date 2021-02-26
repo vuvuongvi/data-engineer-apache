@@ -16,9 +16,8 @@ apt-get install -y openssh-server
 systemctl restart sshd
 systemctl restart ssh
 # Switch to use zk user
-su -l zk
-mkdir -p /data/zookeeper
-chown zk:zk /data/zookeeper
+su - zk -c "mkdir -p /data/zookeeper"
+su - zk -c "chown zk:zk /data/zookeeper"
 # # Change location to opt folder
 # cd /opt
 # sudo wget http://apache.osuosl.org/zookeeper/zookeeper-3.4.13/zookeeper-3.4.13.tar.gz
